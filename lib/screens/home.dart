@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../data/guide-data.dart';
-import 'guide-view.dart';
+import './widgets/card-item.dart';
 import './widgets/drawer.dart';
 import './widgets/rate.dart';
-import './widgets/card-item.dart';
+import '../data/guide-data.dart';
 import '../utils/ad.dart';
+import 'guide-view.dart';
 
 class HomePage extends StatelessWidget {
   final guideData = GuideData();

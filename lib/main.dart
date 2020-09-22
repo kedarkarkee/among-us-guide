@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Among Us Guide 2020',
+      title: 'Among Us Guide and Tutorial',
       theme: ThemeData(
         primarySwatch: Colors.purple,
         accentColor: Colors.amber,

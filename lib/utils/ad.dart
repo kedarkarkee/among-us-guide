@@ -15,9 +15,13 @@ class AdManager {
     childDirected: true,
     nonPersonalizedAds: true,
   );
-  static const String bannerId = 'ca-app-pub-3940256099942544/6300978111';
-  static const String interId = 'ca-app-pub-3940256099942544/1033173712';
+  static const String bannerId = 'ca-app-pub-2225720890839868/5899645087';
+  static const String interId = 'ca-app-pub-2225720890839868/5708073396';
   static const String appId = 'ca-app-pub-2225720890839868~3465053439';
+  static const List<String> nativeId = [
+    'ca-app-pub-2225720890839868/6638011680',
+    'ca-app-pub-2225720890839868/7569263053',
+  ];
   InterstitialAd _interstitialAd;
 
   AdManager._internal();
