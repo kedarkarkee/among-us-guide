@@ -1,14 +1,15 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 class Guide {
   final String name;
   final String imageUrl;
   final List<Content> contents;
 
-  const Guide(
-      {@required this.name,
-      @required this.imageUrl,
-      this.contents = dummyContent});
+  const Guide({
+    @required this.name,
+    @required this.imageUrl,
+    @required this.contents,
+  });
 
   @override
   String toString() {
@@ -23,5 +24,3 @@ class Content {
 
   const Content({this.title = "", this.text = "", this.tip = ""});
 }
-
-const dummyContent = [Content()];

@@ -1,4 +1,4 @@
-package com.example.among_us_guide
+package com.kksofts.amongusguide
 
 import io.flutter.embedding.android.FlutterActivity
 

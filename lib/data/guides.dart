@@ -1,8 +1,14 @@
 import '../model/guide.dart';
 
-const guide1 = Guide(name: 'Controls', imageUrl: 'assets/controls.png');
-const guide2 =
-    Guide(name: 'Tips', imageUrl: 'assets/tips.png', contents: tipsContent);
+const guide1 = Guide(
+  name: 'Rules and Gameplay',
+  imageUrl: 'assets/controls.png',
+  contents: basicsContent,
+);
+const guide2 = Guide(
+    name: 'Tips and Tricks',
+    imageUrl: 'assets/tips.png',
+    contents: tipsContent);
 const guide3 = Guide(
     name: 'Detective',
     imageUrl: 'assets/detective.jpg',
@@ -127,6 +133,11 @@ const detectiveContent = [
 
 const imposterContent = [
   Content(
+    title: "Objective: Kill Off the Crew",
+    text:
+        "1. Blend in with the Crew\n 2. Sneak through vents\n3. Pretend to run tasks\n4. Sabotage the ship and confuse the Crew.\n5. Close doors and trap victims.\n6. Kill off the between cooldowns.",
+  ),
+  Content(
     text:
         "An impostor player who stands out is bound to arouse suspicion. So instead of wandering around obviously following potential victims, impostor players are recommended to look like they are completing tasks. Travel to and stand by computers, the engine, etc. Other crewmates will be doing something similar, so it's not like an impostor will be inconvenienced by playing along. But pretending to complete tasks will just make it that much harder for the crewmates to identify the player as an impostor.",
   ),
@@ -173,6 +184,11 @@ const imposterContent = [
 
 const crewContent = [
   Content(
+    title: "Objective: Fill Group Task Bar or Discover the Imposter.",
+    text:
+        "1. Complete tasks to fill gauge.\n2. React to Imposter\'s sabotage.\n3. Call emergency meeting when imposter found.\n4. Report dead bodies.\n5. Check admin map and security for suspicious activity.",
+  ),
+  Content(
     title: "Try to deduce who is/are the Impostor(s).",
     text:
         "Eject people with evidence. If you randomly point fingers, then you're just making it worse and you'll probably lose trust.",
@@ -198,5 +214,50 @@ const crewContent = [
   Content(
     text:
         "If you have done a visual task and someone who also has a visual task has seen it, follow them so they proceed to do their task. Both will likely trust each other and follow themselves at most part of the game. If this is not the case, try not to follow any other player who hasn't been confirmed, as you'll most likely get ejected for being suspicious due to this following behavior, or you could also get murdered in the way.",
+  ),
+];
+
+const basicsContent = [
+  Content(
+    title: "Introduction",
+    text:
+        "Among Us is a game of teamwork and betrayal. Players are either Crewmates or an Imposter.",
+  ),
+  Content(
+    title: "Playing Mode",
+    text: "Play with 4 to 10 players either online or via local WIFI.",
+  ),
+  Content(
+    title: "Controls",
+    text:
+        "Use the joystick on left to move and use the buttons on the right to interact.",
+  ),
+  Content(
+    title: "Hosting a Game",
+    text:
+        "When hosting a game, you have to control over how the game plays.\n\nFirstly, determine who you want to play with!\n\nIf you want to play with friends online, set to 'private' and share the room code.\n\nIf you want to play with others from all around the world, set to 'public'.",
+  ),
+  Content(
+    text:
+        "Want to play with more tasks? How about faster walk speed? More Imposters? As host, you can change these settings. Be sure to confirm the changes with your fellow players.\n\nIf someone is being rude or spamming, hosts can temporarily kick players as a warning or ban players from thr specific online room.",
+  ),
+  Content(
+    title: "Map",
+    text:
+        "Players have access to a personal mapto help them navigate the ship.",
+  ),
+  Content(
+      title: "Rules",
+      text:
+          "While playing in person, no talking is allowed to keep the game fair between The Crew and The Imposter.\n\n If a player is killed by The Imposter, the cannot talk until the game ends.\n\nGhosts still run their assigned tasks working towards a possible Crewmates win."),
+  Content(
+    title: "Discussion",
+    text:
+        "When someone reports a dead body or calls an emergency meeting, the crew gathers to discuss what they know about the Imposter.\n\nPlayers can now talk openly about who they think the Imposter is and what information they have. When playing in person, Ghosts cannot talk as they already know who the imposter is.\n\nImposters will try to prove their innocence or accuse another crew member.",
+  ),
+  Content(
+    title: "Voting",
+    text:
+        "After discussion, vote for who you think is the Imposter.\n\nWhoever gets majority votes will be ejected from the ship, so vote wisely! If you don\'t have enough information and have decided as a Crew, you can also skip voting to avoid ejecting someone innocent and gather more information.",
   ),
 ];
