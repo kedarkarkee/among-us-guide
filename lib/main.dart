@@ -12,19 +12,31 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   double _bottomPadding = 0.0;
   BannerAd _bannerAd;
+  AppLifecycleState _state = AppLifecycleState.resumed;
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    setState(() {
+      _state = state;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
     FirebaseAdMob.instance.initialize(appId: AdManager.appId);
+    WidgetsBinding.instance.addObserver(this);
     _bannerAd = createBannerAd();
   }
 
   @override
   void dispose() {
     _bannerAd?.dispose();
+    AdManager().dispose();
     super.dispose();
   }
 
@@ -39,14 +51,15 @@ class _MyAppState extends State<MyApp> {
       ),
       home: HomePage(),
       builder: (context, child) {
-        _bannerAd
-            .load()
-            .then((value) => {
-                  if (value) {_bannerAd.show()}
-                })
-            .catchError((err) {
-          print(err);
-        });
+        if (_state == AppLifecycleState.resumed)
+          _bannerAd
+              .load()
+              .then((value) => {
+                    if (value) {_bannerAd.show()}
+                  })
+              .catchError((err) {
+            print(err);
+          });
         return Padding(
           padding: EdgeInsets.only(
             bottom: _bottomPadding,
